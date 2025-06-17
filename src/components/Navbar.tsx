@@ -24,16 +24,22 @@ const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const navbarHeight = 64; // Height of fixed navbar
+      const elementPosition = element.offsetTop - navbarHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
     setIsOpen(false);
   };
 
   const navItems = [
-    { label: 'Beranda', href: '#hero' },
-    { label: 'Fitur', href: '#features' },
-    { label: 'Tentang', href: '#about' },
-    { label: 'Kontak', href: '#contact' }
+    { label: 'Beranda', href: 'hero' },
+    { label: 'Fitur', href: 'features' },
+    { label: 'Kenangan', href: 'memories' },
+    { label: 'Kontak', href: 'waitlist-section' }
   ];
 
   return (
@@ -45,7 +51,12 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-gradient">Livale</h1>
+              <button 
+                onClick={() => scrollToSection('hero')}
+                className="text-2xl font-bold text-gradient hover:opacity-80 transition-opacity"
+              >
+                Livale
+              </button>
             </div>
 
             {/* Desktop Navigation */}
@@ -54,7 +65,7 @@ const Navbar = () => {
                 {navItems.map((item) => (
                   <button
                     key={item.label}
-                    onClick={() => scrollToSection(item.href.slice(1))}
+                    onClick={() => scrollToSection(item.href)}
                     className="text-warmGray-700 hover:text-blush-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
                   >
                     {item.label}
@@ -92,7 +103,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <button
                   key={item.label}
-                  onClick={() => scrollToSection(item.href.slice(1))}
+                  onClick={() => scrollToSection(item.href)}
                   className="block w-full text-left px-3 py-2 text-base font-medium text-warmGray-700 hover:text-blush-600 hover:bg-blush-50 rounded-md transition-colors duration-200"
                 >
                   {item.label}

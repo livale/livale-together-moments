@@ -95,10 +95,12 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
   }
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 }
 
@@ -106,7 +108,7 @@
   .gradient-bg {
     background: linear-gradient(135deg, 
       rgb(254, 247, 247) 0%, 
-      rgb(250, 240, 222) 25%, 
+      rgb(255, 255, 255) 25%, 
       rgb(253, 238, 240) 50%, 
       rgb(246, 247, 246) 75%, 
       rgb(252, 251, 247) 100%);

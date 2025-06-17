@@ -30,12 +30,18 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
-      <HeroSection />
-      <FeatureSection1 />
-      <FeatureSection2 />
-      <MemoriesSection />
+      <div id="hero">
+        <HeroSection />
+      </div>
+      <div id="features">
+        <FeatureSection1 />
+        <FeatureSection2 />
+      </div>
+      <div id="memories">
+        <MemoriesSection />
+      </div>
       <FeatureSection3 />
       <WaitlistSection />
     </div>

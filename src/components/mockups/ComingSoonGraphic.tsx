@@ -19,7 +19,7 @@ const ComingSoonGraphic = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-1 -right-1 w-6 h-6 bg-cream-400 rounded-full flex items-center justify-center">
+              <div className="absolute -top-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center">
                 <span className="text-xs">🎮</span>
               </div>
             </div>
@@ -35,7 +35,7 @@ const ComingSoonGraphic = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-1 -left-1 w-6 h-6 bg-cream-400 rounded-full flex items-center justify-center">
+              <div className="absolute -top-1 -left-1 w-6 h-6 bg-white rounded-full flex items-center justify-center">
                 <span className="text-xs">🎯</span>
               </div>
             </div>
@@ -58,7 +58,7 @@ const ComingSoonGraphic = () => {
               <span className="text-sm font-medium text-warmGray-800">Personality Discovery Quizzes</span>
             </div>
             <div className="flex items-center space-x-3 p-3 bg-white bg-opacity-60 rounded-xl">
-              <div className="w-3 h-3 bg-cream-500 rounded-full animate-pulse"></div>
+              <div className="w-3 h-3 bg-warmGray-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-medium text-warmGray-800">Fun Date Night Games</span>
             </div>
           </div>
