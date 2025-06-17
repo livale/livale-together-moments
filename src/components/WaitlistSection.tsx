@@ -104,35 +104,41 @@ const WaitlistSection = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 pt-8">
-          <div className="relative">
-            <div className="w-40 h-12 bg-black rounded-lg flex items-center justify-center opacity-50 grayscale">
-              <svg className="w-32 h-8" viewBox="0 0 135 40" fill="white">
-                <path d="M130.197 40C133.464 40 135 38.395 135 35.508V4.492C135 1.605 133.464 0 130.197 0H4.803C1.536 0 0 1.605 0 4.492v30.016C0 38.395 1.536 40 4.803 40h125.394z"/>
-                <path d="M68.445 21.222c0-2.047-.855-3.245-2.274-3.245-1.419 0-2.274 1.198-2.274 3.245 0 2.047.855 3.245 2.274 3.245 1.419 0 2.274-1.198 2.274-3.245zm-6.381 0c0-3.473 1.867-5.647 4.107-5.647 2.24 0 4.107 2.174 4.107 5.647 0 3.473-1.867 5.647-4.107 5.647-2.24 0-4.107-2.174-4.107-5.647z" fill="white"/>
-                <text x="30" y="13" fill="white" fontSize="9" fontFamily="Arial">Download on the</text>
-                <text x="30" y="26" fill="white" fontSize="16" fontFamily="Arial" fontWeight="bold">App Store</text>
-              </svg>
+          <div className="relative group cursor-not-allowed">
+            <div className="w-48 h-14 bg-black rounded-xl flex items-center justify-center px-4 opacity-60 grayscale transition-all duration-300 group-hover:opacity-70">
+              <div className="flex items-center space-x-3">
+                <svg className="w-8 h-8" viewBox="0 0 384 512" fill="white">
+                  <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-42.7-77.9-44.4-33.2-1.7-66 19.6-83.2 19.6-16.4 0-44.9-19.6-74.3-19.2-38.3.4-75.6 22.3-95.8 56.7-40.8 68.1-10.1 169.9 29.6 225.8 19.6 27.5 42.4 58.5 72.8 57.5 29.7-1.1 41.1-19.3 77.2-19.3 36.1 0 46.9 19.3 78.8 18.8 32.7-.6 51.1-28.9 70.3-56.8 22.2-32.4 31.2-65.7 31.2-67.2-1.9-.9-59.8-23.8-60-94.3zm-58.2-102.6c16.2-19.8 27.8-47.3 24.3-75.8-23.5 1.4-52 15.4-68.9 34.9-15.2 17.9-28.4 46.9-24.8 74.6 26.1 2.1 52.7-13.3 69.4-33.7z"/>
+                </svg>
+                <div className="text-left">
+                  <div className="text-xs text-white font-light">Download on the</div>
+                  <div className="text-lg text-white font-semibold -mt-1">App Store</div>
+                </div>
+              </div>
             </div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-xs font-semibold text-warmGray-600 bg-white px-2 py-1 rounded shadow">
-                Coming Soon
-              </span>
+              <div className="bg-white px-3 py-1 rounded-full shadow-lg">
+                <span className="text-xs font-semibold text-warmGray-700">Coming Soon</span>
+              </div>
             </div>
           </div>
           
-          <div className="relative">
-            <div className="w-40 h-12 bg-black rounded-lg flex items-center justify-center opacity-50 grayscale">
-              <svg className="w-32 h-8" viewBox="0 0 135 40" fill="white">
-                <path d="M130.197 40C133.464 40 135 38.395 135 35.508V4.492C135 1.605 133.464 0 130.197 0H4.803C1.536 0 0 1.605 0 4.492v30.016C0 38.395 1.536 40 4.803 40h125.394z"/>
-                <path d="M47.424 21.032c0-2.007 1.604-3.123 4.471-3.284l3.268-.182v-.905c0-1.204-.818-1.907-2.215-1.907-1.176 0-1.954.543-2.215 1.385h-1.733c.182-1.542 1.594-2.601 3.988-2.601 2.456 0 3.948 1.199 3.948 3.144v6.608h-1.693v-1.563h-.08c-.663 1.159-1.774 1.763-3.248 1.763-2.034 0-3.491-1.239-3.491-2.458zm7.739-1.019v-.924l-2.94.182c-1.397.088-2.134.643-2.134 1.524 0 .881.717 1.444 1.854 1.444 1.581 0 3.22-1.086 3.22-2.226z" fill="white"/>
-                <text x="30" y="13" fill="white" fontSize="8" fontFamily="Arial">GET IT ON</text>
-                <text x="30" y="26" fill="white" fontSize="14" fontFamily="Arial" fontWeight="bold">Google Play</text>
-              </svg>
+          <div className="relative group cursor-not-allowed">
+            <div className="w-48 h-14 bg-black rounded-xl flex items-center justify-center px-4 opacity-60 grayscale transition-all duration-300 group-hover:opacity-70">
+              <div className="flex items-center space-x-3">
+                <svg className="w-8 h-8" viewBox="0 0 512 512" fill="white">
+                  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
+                </svg>
+                <div className="text-left">
+                  <div className="text-xs text-white font-light">GET IT ON</div>
+                  <div className="text-lg text-white font-semibold -mt-1">Google Play</div>
+                </div>
+              </div>
             </div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-xs font-semibold text-warmGray-600 bg-white px-2 py-1 rounded shadow">
-                Coming Soon
-              </span>
+              <div className="bg-white px-3 py-1 rounded-full shadow-lg">
+                <span className="text-xs font-semibold text-warmGray-700">Coming Soon</span>
+              </div>
             </div>
           </div>
         </div>

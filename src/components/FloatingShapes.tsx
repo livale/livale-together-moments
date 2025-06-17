@@ -19,12 +19,12 @@ const FloatingShapes = () => {
            style={{
              borderLeft: '20px solid transparent',
              borderRight: '20px solid transparent',
-             borderBottom: '35px solid rgb(250, 205, 210)'
+             borderBottom: '35px solid rgb(237, 125, 149)'
            }}>
       </div>
       
       {/* Another circle */}
-      <div className="floating-shape absolute top-1/2 right-1/3 w-8 h-8 bg-cream-400 rounded-full opacity-40"></div>
+      <div className="floating-shape absolute top-1/2 right-1/3 w-8 h-8 bg-warmGray-300 rounded-full opacity-40"></div>
       
       {/* Star shape */}
       <div className="floating-shape absolute bottom-1/4 right-1/5 w-14 h-14 opacity-30">
@@ -36,7 +36,7 @@ const FloatingShapes = () => {
       {/* Organic blob */}
       <div className="floating-shape absolute top-1/5 right-1/2 w-20 h-20 opacity-20">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-          <path fill="rgb(245, 168, 180)" d="M40.5,-47.6C54.8,-35.8,69.8,-25.5,74.2,-11.1C78.6,3.3,72.4,21.8,62.1,36.7C51.8,51.6,37.4,62.9,21.1,67.8C4.8,72.7,-13.4,71.2,-29.5,63.9C-45.6,56.6,-59.6,43.5,-66.8,27.2C-74,10.9,-74.4,-8.6,-68.9,-25.6C-63.4,-42.6,-52,-57.1,-37.6,-68.7C-23.2,-80.3,-5.8,-89,7.1,-97.8C20,-106.6,40,-115.5,54.5,-103.4"/>
+          <path fill="rgb(237, 125, 149)" d="M40.5,-47.6C54.8,-35.8,69.8,-25.5,74.2,-11.1C78.6,3.3,72.4,21.8,62.1,36.7C51.8,51.6,37.4,62.9,21.1,67.8C4.8,72.7,-13.4,71.2,-29.5,63.9C-45.6,56.6,-59.6,43.5,-66.8,27.2C-74,10.9,-74.4,-8.6,-68.9,-25.6C-63.4,-42.6,-52,-57.1,-37.6,-68.7C-23.2,-80.3,-5.8,-89,7.1,-97.8C20,-106.6,40,-115.5,54.5,-103.4"/>
         </svg>
       </div>
     </div>
