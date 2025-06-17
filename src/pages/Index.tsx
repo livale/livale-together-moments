@@ -2,9 +2,11 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import FeatureSection1 from '@/components/FeatureSection1';
 import FeatureSection2 from '@/components/FeatureSection2';
+import MemoriesSection from '@/components/MemoriesSection';
 import FeatureSection3 from '@/components/FeatureSection3';
 import WaitlistSection from '@/components/WaitlistSection';
 
@@ -29,9 +31,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Navbar />
       <HeroSection />
       <FeatureSection1 />
       <FeatureSection2 />
+      <MemoriesSection />
       <FeatureSection3 />
       <WaitlistSection />
     </div>

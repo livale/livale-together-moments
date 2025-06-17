@@ -41,7 +41,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden">
+    <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden">
       <FloatingShapes />
       
       <div className="relative z-10 text-center max-w-4xl mx-auto section-padding">
