@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +8,7 @@
 @layer base {
   :root {
     --background: 255 255 255;
-    --foreground: 82 73 64;
+    --foreground: 61 99 1;
 
     --card: 254 253 249;
     --card-foreground: 82 73 64;
@@ -111,19 +110,23 @@
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, 
-      rgb(254, 247, 247) 0%, 
-      rgb(255, 255, 255) 25%, 
-      rgb(253, 238, 240) 50%, 
-      rgb(246, 247, 246) 75%, 
-      rgb(252, 251, 247) 100%);
+    background: linear-gradient(
+      135deg,
+      rgb(254, 247, 247) 0%,
+      rgb(255, 255, 255) 25%,
+      rgb(253, 238, 240) 50%,
+      rgb(246, 247, 246) 75%,
+      rgb(252, 251, 247) 100%
+    );
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, 
-      rgb(237, 125, 149) 0%, 
-      rgb(205, 61, 99) 50%, 
-      rgb(86, 120, 92) 100%);
+    background: linear-gradient(
+      135deg,
+      rgb(237, 125, 149) 0%,
+      rgb(205, 61, 99) 50%,
+      rgb(86, 120, 92) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -159,10 +162,11 @@
 }
 
 @keyframes float {
-  0%, 100% { 
+  0%,
+  100% {
     transform: translateY(0px);
   }
-  50% { 
+  50% {
     transform: translateY(-20px);
   }
 }
