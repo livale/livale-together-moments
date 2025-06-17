@@ -17,7 +17,7 @@ const MemoriesSection = () => {
         trigger: sectionRef.current,
         start: "top 80%",
         end: "bottom 20%",
-        toggleActions: "play none none reverse"
+        toggleActions: "play none none none"
       }
     });
 
@@ -34,6 +34,10 @@ const MemoriesSection = () => {
       stagger: 0.2,
       ease: "power3.out"
     }, "-=0.4");
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   const features = [
@@ -74,7 +78,7 @@ const MemoriesSection = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 opacity-100"
             >
               <div className={`w-16 h-16 bg-${feature.color}-100 rounded-2xl flex items-center justify-center mb-6`}>
                 <feature.icon className={`w-8 h-8 text-${feature.color}-600`} />

@@ -7,13 +7,31 @@ import { Button } from '@/components/ui/button';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      // Check which section is currently in view
+      const sections = ['hero', 'features', 'memories', 'waitlist-section'];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call once to set initial state
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -24,7 +42,7 @@ const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const navbarHeight = 64; // Height of fixed navbar
+      const navbarHeight = 64;
       const elementPosition = element.offsetTop - navbarHeight;
       
       window.scrollTo({
@@ -66,9 +84,16 @@ const Navbar = () => {
                   <button
                     key={item.label}
                     onClick={() => scrollToSection(item.href)}
-                    className="text-warmGray-700 hover:text-blush-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                    className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                      activeSection === item.href 
+                        ? 'text-blush-600' 
+                        : 'text-warmGray-700 hover:text-blush-600'
+                    }`}
                   >
                     {item.label}
+                    {activeSection === item.href && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blush-600 rounded-full"></div>
+                    )}
                   </button>
                 ))}
               </div>
@@ -104,7 +129,11 @@ const Navbar = () => {
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-3 py-2 text-base font-medium text-warmGray-700 hover:text-blush-600 hover:bg-blush-50 rounded-md transition-colors duration-200"
+                  className={`block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
+                    activeSection === item.href
+                      ? 'text-blush-600 bg-blush-50'
+                      : 'text-warmGray-700 hover:text-blush-600 hover:bg-blush-50'
+                  }`}
                 >
                   {item.label}
                 </button>
